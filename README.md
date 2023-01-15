@@ -26,3 +26,17 @@
         routeDir
     }
 }
+
+## HOW TO MAKE THE PROJECT
+
+* Add modules in views/admin
+    add <Header />
+    add context about secure routes => 
+        import secureContext from 'context/secureRoutes';
+        .
+        .
+        .
+         const { setUrlRoute } = useContext(secureContext)
+            useEffect(() => {
+                setUrlRoute(UrlNodeServer.routesDir.sub.payments)
+            }, [setUrlRoute])
